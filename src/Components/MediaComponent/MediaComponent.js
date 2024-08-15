@@ -11,27 +11,28 @@ export const MediaComponent = () => {
 
     ]
 
+
     return (
-        <div className="h-[705px] bg-[#03C08B] mt-[70px] flex flex-col items-center">
-                <p className="w-full mt-[90px] text-center font-dela-gothic font-normal text-5xl leading-9 text-[#FBFBFB]">
-                  MASS MEDIA
-                </p>
-         <div className="h-[375px] w-[1170px] mt-[70px]  bg-[#FFFFFF] border-4 rounded-[40px] border-[#F78154] flex justify-center items-center ">
-
-         <div className="mt-4 flex justify-center items-center gap-5">
+      <div className="h-auto bg-[#03C08B] mt-[70px] flex flex-col items-center py-10">
+        <p className="w-full text-center font-dela-gothic font-normal text-3xl sm:text-5xl leading-9 text-[#FBFBFB]">
+          MASS MEDIA
+        </p>
+        <div className="mt-[40px] w-full max-w-[1170px] bg-[#FFFFFF] border-4 rounded-[40px] border-[#F78154] p-8 flex flex-col sm:flex-row justify-center items-center gap-10">
           {dataText.map((item, index) => (
-           <div key={index} className="h-[182px] w-[200px] mb-4 flex flex-col items-center">
-
-             <p className="font-bold text-2xl text-[#2C2C2C]">{item.text}</p>
-             <div className="h-[2px] w-[100px] mt-2 mb-3 bg-[#F78154]"></div>
-             <p className="font-bold text-sm text-[#2C2C2C] text-center"> {item.conditions}</p>
-           </div>
+            <div 
+              key={index} 
+              className="h-auto w-full sm:w-[200px] flex flex-col items-center text-center"
+            >
+              <p className="font-bold text-xl sm:text-2xl text-[#2C2C2C]">
+                {item.text}
+              </p>
+              <div className="h-[2px] w-[80px] sm:w-[100px] mt-2 mb-3 bg-[#F78154]"></div>
+              <p className="font-bold text-xs sm:text-sm text-[#2C2C2C]">
+                {item.conditions}
+              </p>
+            </div>
           ))}
-         </div>
-
-         </div>
-
-
         </div>
-    )
+      </div>
+    );
 }

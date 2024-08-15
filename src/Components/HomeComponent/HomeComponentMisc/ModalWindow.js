@@ -10,7 +10,6 @@ export const ModalWindow = () => {
             <p className="w-[327px] ml-[50px] mt-6 mb-4 font-medium text-xl text-center text-[#2C2C2C]">SIGN UP NOW AND START! YOU'LL SEE THE RESULT IN 30 MINUTES</p>
             <form>
               <div className="mb-4 mt-6">
-                {/* <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label> */}
                 <input
                   type="text"
                   id="name"

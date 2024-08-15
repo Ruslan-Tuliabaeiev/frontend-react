@@ -3,6 +3,8 @@ import Collapsible from 'react-collapsible';
 
 import Down from '../Images/QuestionImages/Vector.svg';
 
+import './questionComponent.css';
+
 export const QuestionComponent = () => {
     const [activeIndex, setActiveIndex] = useState(null);
 
@@ -23,51 +25,40 @@ export const QuestionComponent = () => {
         setActiveIndex(activeIndex === index ? null : index);
       };
 
-    return (
-        <div className="h-[1442px] flex flex-col items-center">
-               <p className="mt-[70px] font-dela-gothic font-normal text-3xl leading-9 text-[#2C2C2C] text-center">
-                  FAQ
-               </p>
-
-               <div className="mt-[40px] p-4">
-                {dataText.map((item, index) => (
-
-                <Collapsible 
-                key={index} 
+      return (
+        <div className="h-auto flex flex-col items-center px-4 sm:px-0"> 
+          <p className="mt-8 sm:mt-[70px] font-dela-gothic font-normal text-3xl sm:text-4xl leading-9 text-[#2C2C2C] text-center">
+            FAQ
+          </p>
+      
+          <div className="mt-6 sm:mt-[40px] w-full flex flex-col items-center">
+            {dataText.map((item, index) => (
+              <Collapsible
+                key={index}
                 trigger={
                   <div 
-                    className="w-[1050px] flex justify-between font-bold text-xl text-[#2C2C2C] cursor-pointer"
+                  className="collapsible w-full max-w-[1050px] flex justify-between font-bold text-lg sm:text-xl text-[#2C2C2C] cursor-pointer"
                     onClick={() => handleToggle(index)}
                   >
                     <span>{item.text}</span>
-                    <div>
-                      <img 
-                        className={`h-[10px] mt-2 transition-transform duration-1000 delay-200 fill-[#11986E] ${activeIndex === index ? 'rotate-180' : ''}`} 
-                        src={Down} 
+                    <div  className="">
+                      <img
+                        className={`h-[10px] mt-2 transition-transform duration-1000 delay-200 fill-[#11986E] ${activeIndex === index ? 'rotate-180' : ''}`}
+                        src={Down}
                         alt="Down Arrow"
                       />
                     </div>
                   </div>
-                } 
-                className="h-[104px] w-[1150px] pl-10 flex items-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E]"
-                openedClassName="h-[134px] w-[1150px] pl-10 flex flex-col justify-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E]"
+                }
+                className="w-full max-w-[1150px] sm:h-[134px] px-4 sm:pl-10 py-4 flex items-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E] transition-all duration-500"
+                openedClassName="w-full max-w-[1150px] sm:h-[134px] px-4 sm:pl-10 py-6 flex flex-col justify-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E] transition-all duration-500"
                 open={activeIndex === index}
               >
-                <p className="text-base text-[#6D6D6D] mt-2">{item.conditions}</p>
+                <p className="text-sm sm:text-base text-[#6D6D6D] mt-2">{item.conditions}</p>
               </Collapsible>
             ))}
+          </div>
         </div>
+      );
 
-        </div>
-
-    );
 };
-
-                // <Collapsible 
-                //     key={index} 
-                //     trigger={<div className="w-[900px] flex font-bold text-xl text-[#2C2C2C]">{item.text}<div ><img className="h-[5px] ml-2" src={Down} alt="V"/></div></div>} 
-                //     className="h-[104px] w-[1150px] pl-10 flex items-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E]"
-                //     triggerClassName="cursor-pointer"
-                //     openedClassName="h-[134px] w-[1150px] pl-10 flex flex-col justify-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E]">
-                //     <p className="text-base text-[#6D6D6D] mt-2">{item.conditions}</p>
-                // </Collapsible>

@@ -44,7 +44,7 @@ export const PrimeAnalizesComponent = () => {
       ];
 
     const carouselItems = items.map((item, index) => (
-        <div key={index} className="h-[390px] w-[270px] flex flex-col items-center justify-center rounded-[40px]  border-[#2C2C2C] bg-[#F5FFFC]">
+        <div key={index} className="h-[390px] w-[270px] ml-auto mr-auto flex flex-col items-center justify-center rounded-[40px]  border-[#2C2C2C] bg-[#F5FFFC]">
             <div className="mr-2 mb-2 border-2 rounded-[40px] border-[#11986E]">
             <img 
                 src={item.image} 
@@ -65,13 +65,14 @@ export const PrimeAnalizesComponent = () => {
             </p>
 
             {/* Карусель */}
+           
             <AliceCarousel
                 mouseTracking
                 items={carouselItems}
                 responsive={{
                     0: { items: 1 },   // Показує 1 елемент на малих екранах
-                    768: { items: 3 }, // Показує 2 елементи на середніх екранах
-                    1024: { items: 4 }, // Показує 3 елементи на великих екранах
+                    868: { items: 3 }, // Показує 2 елементи на середніх екранах
+                    1224: { items: 4 }, // Показує 3 елементи на великих екранах
                 }}
                 controlsStrategy="responsive"
                 autoPlay={true}
@@ -80,6 +81,7 @@ export const PrimeAnalizesComponent = () => {
                 disableButtonsControls={false}  // Включаємо кнопки навігації
                 disableDotsControls={true}     // Вимикаємо точки навігації
             />
+           
         </div>
     );
 
