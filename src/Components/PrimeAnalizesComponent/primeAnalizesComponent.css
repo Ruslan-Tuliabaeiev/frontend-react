@@ -1,0 +1,54 @@
+
+.prime-container {
+    min-height: 787px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #03C08B;
+    padding: 20px;
+  }
+  
+  .prime-title {
+    width: 100%;
+    text-align: center;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 50px;
+    color: #FBFBFB;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 400px) {
+    .prime-container {
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .prime-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .collapsible {
+        width: 100%;
+        max-width: 300px;
+        font-size: 0.875rem; 
+        padding: 0 8px; 
+    }
+
+    .collapsible-block-img {
+      height: 30px;
+      width: 30px;
+    }
+    .collapsible-img {
+        height: 15px;
+        width: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

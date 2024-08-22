@@ -22,35 +22,34 @@ export const HeaderComponent = () => {
     }, []);
     
     return (
-      <header className="z-10">
-          <div className="h-[80px] flex items-center justify-between bg-[#FFFFFF] px-4 md:px-[380px]">
-              <div className="flex items-center">
-                  <div>
-                      <img src={Group} alt="Group" className="h-[40px] w-auto md:h-auto" />
-                  </div>
+        <header className="header">
+        <div className="header-component">
+            <div className="header-component-logo">
+                <div>
+                    <img src={Group} alt="Group" className="header-group-logo" />
+                </div>
+                <div className="header-logo-title">
+                    <img src={VectoP} alt="P" className="header-title-char" />
+                    <img src={VectoR} alt="R" className="header-title-char" />
+                    <img src={VectoI} alt="I" className="header-title-char" />
+                    <img src={VectoM} alt="M" className="header-title-char" />
+                    <img src={VectoE} alt="E" className="header-title-char" />
+                </div>
+            </div>
+            <div className="header-country">
+                <p className="country-text">Available in COUNTRY</p>
+                <img className="down-arrow" src={Down} alt="V" />
+                <div className="flag-container">
+                    {countryCode ? (
+                        <ReactCountryFlag countryCode={countryCode} svg />
+                    ) : (
+                        'Loading...'
+                    )}
+                </div>
+            </div>
+        </div>
+        <div className="header-line"></div>
+    </header>
 
-                  <div className="ml-2 flex gap-1">
-                      <img src={VectoP} alt="P" className="h-6 w-auto" />
-                      <img src={VectoR} alt="R" className="h-6 w-auto" />
-                      <img src={VectoI} alt="I" className="h-6 w-auto" />
-                      <img src={VectoM} alt="M" className="h-6 w-auto" />
-                      <img src={VectoE} alt="E" className="h-6 w-auto" />
-                  </div>
-              </div>
-              <div className="flex items-center gap-2">
-                  <p className="header-text font-normal font-dela-gothic text-xs text-[#2C2C2C]">Available in COUNTRY</p>
-                  <img className="h-[5px]" src={Down} alt="V" />
-                  <div>
-                      {countryCode ? (
-                          <ReactCountryFlag countryCode={countryCode} svg style={{ width: '18px', height: '26px' }} />
-                      ) : (
-                          'Loading...'
-                      )}
-                  </div>
-              </div>
-          </div>
-
-          <div className="h-[5px] bg-[#11986E] md:h-[10px]"></div>
-      </header>
   );
 };

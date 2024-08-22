@@ -10,6 +10,8 @@ import Foto5 from '../Images/PrimeAnalizesImages/Rectangle(5).jpg';
 import Foto6 from '../Images/PrimeAnalizesImages/Rectangle(6).jpg';
 import Foto7 from '../Images/PrimeAnalizesImages/Rectangle288.jpg';
 
+import'./primeAnalizesComponent.css';
+
 export const PrimeAnalizesComponent = () => {
 
     const items = [
@@ -59,12 +61,12 @@ export const PrimeAnalizesComponent = () => {
     ));
 
     return (
-        <div className="min-h-[787px] mt-[100px] flex flex-col items-center bg-[#03C08B] p-8">
-            <p className="w-full text-center font-dela-gothic font-normal text-5xl leading-9 text-[#FBFBFB] mt-[50px] mb-[50px]">
-                PRIME ANALYZES
-            </p>
+      <div className="prime-container">
+          <p className="prime-title">
+               PRIME ANALYZES
+          </p>
 
-            {/* Карусель */}
+            {/* Carousel */}
            
             <AliceCarousel
                 mouseTracking

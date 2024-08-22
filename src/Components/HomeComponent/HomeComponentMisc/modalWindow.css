@@ -1,0 +1,99 @@
+
+.form-container {
+    width: 500px;
+    height: 607px;
+    background-color: rgba(17, 152, 109, 0.2);
+    padding: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    border: 2px solid #11986E;
+  }
+  
+  .heading-text {
+    width: 327px;
+    margin: 24px auto;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #2C2C2C;
+  }
+  
+  .input-container {
+    margin: 24px 0;
+  }
+  
+  .input-field {
+    display: block;
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 30px;
+    padding: 8px;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+  }
+  
+  .checkbox-label {
+    font-size: 14px;
+    color: #5B5B5B;
+  }
+  
+  .submit-button {
+    width: 100%;
+    margin-top: 40px;
+    padding: 8px 16px;
+    background-color: #F78154;
+    color: white;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #d16a41;
+  }
+  
+  @media (max-width: 400px) {
+    .form-container {
+      width: 90%;
+      height: 500px;
+      padding: 16px;
+      border-radius: 20px;
+    }
+  
+    .heading-text {
+      width: 100%;
+      font-size: 16px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  
+    .input-container {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  
+    .input-field {
+      padding: 6px;
+      border-radius: 20px;
+    }
+  
+    .checkbox-container {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  
+    .checkbox-label {
+      font-size: 12px;
+    }
+  
+    .submit-button {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 20px;
+      margin-top: 24px;
+    }
+  }
+  

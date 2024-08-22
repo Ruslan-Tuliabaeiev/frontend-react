@@ -1,4 +1,110 @@
 
-.header-text {
-    font-family: Dela Gothic One;
+.header-component {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 0 16px;
+}
+
+.header-component-logo {
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.header-group-logo {
+    height: 40px;
+    width: auto;
+}
+
+.header-logo-title {
+    margin-left: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+.header-title-char {
+    height: 24px;
+    width: auto;
+}
+
+.header-country {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.country-text {
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 12px;
+    color: #2C2C2C;
+}
+
+.down-arrow {
+    height: 5px;
+}
+
+.flag-container {
+    width: 18px;
+    height: 26px;
+}
+
+.header-line {
+    height: 5px;
+    background-color: #11986E;
+}
+
+@media (max-width: 400px) {
+    .header-component{
+        height: 60px;
+        padding: 0 8px;
+     
+    }
+
+    .header-component-logo {
+        margin-left: 0;
+    }
+
+    .header-country {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    
+    .header-group-logo {
+        height: 30px;
+    }
+
+    .header-title-char {
+        height: 18px;
+    }
+
+    .header-logo-title{
+        margin-left: 4px;
+        gap: 2px;
+    }
+
+    .country-text {
+        
+        font-size: 10px;
+
+    }
+
+    .down-arrow {
+        height: 4px;
+    }
+
+    .flag-container {
+        width: 16px;
+        height: 22px;
+    }
+
+    .header-line{
+        height: 5px;
+        width: 100%;
+    }
 }

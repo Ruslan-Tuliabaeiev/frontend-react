@@ -41,17 +41,17 @@ export const QuestionComponent = () => {
                     onClick={() => handleToggle(index)}
                   >
                     <span>{item.text}</span>
-                    <div  className="">
+                    <div  className="collapsible-block-img">
                       <img
-                        className={`h-[10px] mt-2 transition-transform duration-1000 delay-200 fill-[#11986E] ${activeIndex === index ? 'rotate-180' : ''}`}
+                        className={`collapsible-img h-[10px] mt-2 transition-transform duration-1000 delay-200 fill-[#11986E] ${activeIndex === index ? 'rotate-180' : ''}`}
                         src={Down}
                         alt="Down Arrow"
                       />
                     </div>
                   </div>
                 }
-                className="w-full max-w-[1150px] sm:h-[134px] px-4 sm:pl-10 py-4 flex items-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E] transition-all duration-500"
-                openedClassName="w-full max-w-[1150px] sm:h-[134px] px-4 sm:pl-10 py-6 flex flex-col justify-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E] transition-all duration-500"
+                className="w-full max-w-[1150px] px-4 sm:pl-10 py-4 flex items-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E] transition-all duration-500"
+                openedClassName="w-full max-w-[1150px] px-4 sm:pl-10 py-6 flex flex-col justify-center mb-4 rounded-[40px] border-b-4 border-4 border-[#11986E] transition-all duration-500"
                 open={activeIndex === index}
               >
                 <p className="text-sm sm:text-base text-[#6D6D6D] mt-2">{item.conditions}</p>

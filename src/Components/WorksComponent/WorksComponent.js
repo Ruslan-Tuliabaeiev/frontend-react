@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import Vector from '../Images/WorksImages/Group(1).svg';
-// import VectorBlock from '../Images/WorksImages/Vector(2).svg';
-
 import { ModalWindow } from "../ModelWindow/ModalWindow";
+
+import './worksComponent.css'
 
 export const WorksComponent = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,50 +24,47 @@ export const WorksComponent = () => {
     };
 
     return (
-      <div className="flex flex-col items-center justify-center">
-
-           <div className="relative w-full h-[148px] flex justify-center items-center mt-[50px] mb-[50px]">
-              <img src={Vector} alt="Vector" className="absolute w-[738px] h-[148px] object-cover" />
-              <p className="relative font-dela-gothic font-normal text-3xl leading-9 text-[#2C2C2C] text-center">
-                 HOW IT WOKS?
-              </p>
-             </div>
-
-        <div className="mt-4 flex flex-col items-center gap-10">
-
-          <div className="flex flex-col sm:flex-row justify-center mb-4 gap-4 relative">
-            {dataText.slice(0, 2).map((item, index) => (
-              <div 
-                key={index} 
-                className="flex flex-col gap-4 border-l-8 border-b-8 border-[#F78154] p-4 w-full sm:w-[417px] sm:mx-4"
-              >
-                <p className="font-bold text-4xl text-[#F78154] font-dela-gothic">{item.number}</p>
-                <div className="h-auto flex flex-col justify-center">
-                  <p className="mb-6 font-bold text-2xl text-[#2C2C2C] text-center font-dela-gothic">{item.text}</p>
-                  <p className="font-bold text-base text-[#2C2C2C] text-center font-serif">{item.conditions}</p>
-                </div>
+      <div className="works-container">
+          <div className="works-header">
+              <img src={Vector} alt="Vector" className="works-logo"/>
+              <p className="works-logo-text">HOW IT WORKS?</p>
+          </div>
+  
+          <div className="card-container">
+              <div className="flex flex-col sm:flex-row justify-center mb-4 gap-4 relative">
+                  {dataText.slice(0, 2).map((item, index) => (
+                      <div 
+                          key={index} 
+                          className="card"
+                      >
+                          <p className="card-number">{item.number}</p>
+                          <div className="h-auto flex flex-col justify-center">
+                              <p className="card-text">{item.text}</p>
+                              <p className="card-conditions">{item.conditions}</p>
+                          </div>
+                      </div>
+                  ))}
               </div>
-            ))}
+  
+              <div className="card">
+                  <p className="card-number">{dataText[2].number}</p>
+                  <div className="h-auto flex flex-col justify-center">
+                      <p className="card-text">{dataText[2].text}</p>
+                      <p className="card-conditions">{dataText[2].conditions}</p>
+                  </div>
+              </div>
           </div>
-
-          <div className="flex flex-col gap-4 border-l-8 border-b-8 border-[#F78154] p-4 w-full sm:w-[417px] sm:mx-4">
-            <p className="font-bold text-4xl text-[#F78154] font-dela-gothic">{dataText[2].number}</p>
-            <div className="h-auto flex flex-col justify-center">
-              <p className="mb-6 font-bold text-2xl text-[#2C2C2C] text-center font-dela-gothic">{dataText[2].text}</p>
-              <p className="font-bold text-base text-[#2C2C2C] text-center font-serif">{dataText[2].conditions}</p>
-            </div>
-          </div>
-        </div>
-
-        <button
-          onClick={openModal}
-          type="submit"
-          className="w-full sm:w-[315px] mt-10 py-2 px-4 bg-[#F78154] text-xl text-white rounded-[30px] hover:bg-[#d16a41]"
-        >
-          Start
-        </button>
-
-        {isModalOpen && <ModalWindow isOpen={isModalOpen} onClose={closeModal} />}
+  
+          <button
+              onClick={openModal}
+              type="submit"
+              className="works-container-button"
+          >
+              Start
+          </button>
+  
+          {isModalOpen && <ModalWindow isOpen={isModalOpen} onClose={closeModal} />}
       </div>
-    );
+  );
+  
 }
