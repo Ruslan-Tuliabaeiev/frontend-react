@@ -25,8 +25,8 @@ export const HomeComponent = () => {
 
       <div className="home-container">
       <div className="home-container_block flex flex-col items-center md:flex-row  mt-[200px]"> 
-        <div className="text-container">
-          <p className="main-heading text-center">
+        <div className="home-text-container">
+          <p className="home-main-heading text-center">
             OUR PRIME SOFTWARE HAS ALREADY LET THOUSANDS OF PEOPLE ALL AROUND
             THE GLOBE GET RICH!
           </p>

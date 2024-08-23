@@ -36,14 +36,14 @@
     margin-top: 200px;
 }
 
-.text-container {
+.home-text-container {
     width: 100%;
     max-width: 670px;
     margin-bottom: 100px;
     text-align: center;
 }
 
-.main-heading {
+.home-main-heading {
     font-family: "Dela Gothic One", sans-serif;
     font-size: 32px;
     line-height: 36px;
@@ -75,7 +75,7 @@
 .modal-container {
     width: 100%;
     margin-left: 0;
-    margin-top: 7px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
 }
@@ -99,12 +99,12 @@
         margin-top: 60px;
     }
 
-    .text-container {
+    .home-text-container {
         width: 100%;
         margin-bottom: 50px;
     }
 
-    .main-heading {
+    .home-main-heading {
         max-width: 300px;
         margin-left: auto;
         margin-right: auto;
@@ -138,7 +138,4 @@
         margin-right: auto;
     }
 
-    .modal-container {
-        margin-top: 40px;
-    }
 }

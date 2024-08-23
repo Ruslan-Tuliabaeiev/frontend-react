@@ -11,6 +11,13 @@ import Amazon from '../Images/FooterImages/Frame234.svg';
 import './footerComponent.css';
 
 export const FooterComponent = () => {
+  const footerTitCompanyName = [
+    { src: VectoP, alt: 'P' },
+    { src: VectoR, alt: 'R' },
+    { src: VectoI, alt: 'I' },
+    { src: VectoM, alt: 'M' },
+    { src: VectoE, alt: 'E' }
+  ]
 
     return (
         <footer className="h-auto mb-10 bg-[#FFFFFF]">
@@ -19,12 +26,19 @@ export const FooterComponent = () => {
             <div className="mt-4 flex flex-col items-center sm:flex-row sm:items-center sm:justify-center sm:gap-4">
               <img src={Group} alt="Group" className="mb-4"/>
               <div className="flex gap-2">
+                {
+                  footerTitCompanyName.map((logo, index) => (
+                    <img key={index} src={logo.src} alt={logo.alt} className="footer-title-char"/>
+                  ))
+                }
+              </div>
+              {/* <div className="flex gap-2">
                 <img src={VectoP} alt="P" className="footer-title-char"/>
                 <img src={VectoR} alt="R" className="footer-title-char"/>
                 <img src={VectoI} alt="I" className="footer-title-char"/>
                 <img src={VectoM} alt="M" className="footer-title-char"/>
                 <img src={VectoE} alt="E" className="footer-title-char"/>
-              </div>
+              </div> */}
             </div>
       
             <div className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-10">

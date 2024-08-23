@@ -14,6 +14,14 @@ import './headerComponent.css'
 export const HeaderComponent = () => {
     const [countryCode, setCountryCode] = useState('');
 
+    const headerTitCompanyName = [
+        { src: VectoP, alt: 'P' },
+        { src: VectoR, alt: 'R' },
+        { src: VectoI, alt: 'I' },
+        { src: VectoM, alt: 'M' },
+        { src: VectoE, alt: 'E' }
+      ]
+
     useEffect(() => {
       fetch('https://ipapi.co/json/')
         .then((response) => response.json())
@@ -29,12 +37,19 @@ export const HeaderComponent = () => {
                     <img src={Group} alt="Group" className="header-group-logo" />
                 </div>
                 <div className="header-logo-title">
+                {
+                  headerTitCompanyName.map((logo, index) => (
+                    <img key={index} src={logo.src} alt={logo.alt} className="header-title-char"/>
+                  ))
+                }
+              </div>
+                {/* <div className="header-logo-title">
                     <img src={VectoP} alt="P" className="header-title-char" />
                     <img src={VectoR} alt="R" className="header-title-char" />
                     <img src={VectoI} alt="I" className="header-title-char" />
                     <img src={VectoM} alt="M" className="header-title-char" />
                     <img src={VectoE} alt="E" className="header-title-char" />
-                </div>
+                </div> */}
             </div>
             <div className="header-country">
                 <p className="country-text">Available in COUNTRY</p>
