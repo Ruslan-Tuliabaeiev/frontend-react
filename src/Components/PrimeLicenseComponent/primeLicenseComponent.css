@@ -1,14 +1,15 @@
 
-.container {
+.primeLicense-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background-color: #F5FFFC;
   }
   
-  .main-title,
-  .sub-title {
+  .primeLicense-main-title,
+  .primeLicense-sub-title {
     font-family: 'Dela Gothic One', sans-serif;
     font-weight: normal;
     text-align: center;
@@ -16,14 +17,14 @@
     margin: 0;
   }
   
-  .main-title {
+  .primeLicense-main-title {
     font-size: 40px;
     line-height: 50px;
     max-width: 619px;
     margin-top: 50px;
   }
   
-  .sub-title {
+  .primeLicense-sub-title {
     font-size: 40px;
     line-height: 50px;
     max-width: 619px;
@@ -31,18 +32,20 @@
     margin-bottom: 70px;
   }
   
-  .items-container {
+  .primeLicense-items-container {
     margin-top: 20px;
   }
   
-  .item {
+  .primeLicense-item {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
   }
   
-  .icon-wrapper {
+  .primeLicense-icon-wrapper {
+    /* height: 100px;
+    width: 100px; */
     position: relative;
     margin-right: 20px;
   }
@@ -51,30 +54,33 @@
     width: 85px;
   }
   
-  .shape-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .primeLicense-shape-icon {
+    /* position: absolute; */
+    position: relative;
+    top: -45px;
+    left: 50px;
+    /* transform: translate(-50%, -50%); */
     height: 20px;
+   
   }
   
 
   
-  .text-gray {
+  .primeLicense-text-gray {
     font-weight: bold;
     font-size: 24px;
     color: #6D6D6D;
+    margin-left: 20px;
   }
   
-  .text-orange {
+  .primeLicense-text-orange {
     font-weight: bold;
     font-size: 24px;
     color: #F78154;
     margin-left: 8px;
   }
   
-  .order-button {
+  .primeLicense-order-button {
     width: 315px;
     margin-top: 40px;
     padding: 12px 20px;
@@ -85,13 +91,13 @@
     transition: background-color 0.3s ease;
   }
   
-  .order-button:hover {
+  .primeLicense-order-button:hover {
     background-color: #d16a41;
   }
   
   @media (max-width: 400px) {
-    .main-title,
-    .sub-title {
+    .primeLicense-main-title,
+    .primeLicense-sub-title {
       font-size: 24px;
       line-height: 32px;
       max-width: 100%;
@@ -99,20 +105,24 @@
       margin-bottom: 20px;
     }
   
-    .group-icon {
+    .primeLicense-group-icon {
       width: 50px;
+ 
     }
   
-    .shape-icon {
+    .primeLicense-shape-icon {
       height: 14px;
+      top: -35px;
+      left: 60%;
     }
   
-    .text-gray,
-    .text-orange {
+    .primeLicense-text-gray,
+    .primeLicense-text-orange {
       font-size: 16px;
+      margin-left: 10px;
     }
   
-    .order-button {
+    .primeLicense-order-button {
       width: 100%;
       font-size: 16px;
       padding: 10px;

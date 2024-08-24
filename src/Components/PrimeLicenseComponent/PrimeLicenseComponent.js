@@ -27,20 +27,20 @@ export const PrimeLicenseComponent = () => {
     ]
 
     return (
-      <div className="container">
-        <p className="main-title">PRIME</p>
-        <p className="sub-title">LIFETIME LICENSE</p>
+      <div className="primeLicense-container">
+        <p className="primeLicense-main-title">PRIME</p>
+        <p className="primeLicense-sub-title">LIFETIME LICENSE</p>
     
-        <div className="items-container">
+        <div className="primeLicense-items-container">
           {dataText.map((item, index) => (
-            <div key={index} className="item">
-              <div className="icon-wrapper">
+            <div key={index} className="primeLicense-item">
+              <div className="primeLicense-icon-wrapper">
                 <img src={Group} alt="Group" className="group-icon" />
-                <img src={Shape} alt="Shape" className="shape-icon" />
+                <img src={Shape} alt="Shape" className="primeLicense-shape-icon" />
               </div>
     
-              <div className="text-wrapper">
-                <p className="text-gray">{item.text}<span className="text-orange">: {item.conditions}</span></p>
+              <div className="primeLicense-text-wrapper">
+                <p className="primeLicense-text-gray">{item.text}<span className="primeLicense-text-orange">: {item.conditions}</span></p>
               </div>
             </div>
           ))}
@@ -49,7 +49,7 @@ export const PrimeLicenseComponent = () => {
         <button
           onClick={openModal}
           type="button"
-          className="order-button"
+          className="primeLicense-order-button"
         >
           Order now
         </button>

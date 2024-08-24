@@ -32,13 +32,6 @@ export const FooterComponent = () => {
                   ))
                 }
               </div>
-              {/* <div className="flex gap-2">
-                <img src={VectoP} alt="P" className="footer-title-char"/>
-                <img src={VectoR} alt="R" className="footer-title-char"/>
-                <img src={VectoI} alt="I" className="footer-title-char"/>
-                <img src={VectoM} alt="M" className="footer-title-char"/>
-                <img src={VectoE} alt="E" className="footer-title-char"/>
-              </div> */}
             </div>
       
             <div className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-10">
